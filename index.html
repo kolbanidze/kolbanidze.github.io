@@ -325,14 +325,20 @@
                         <p class="text-sm text-gray-500 mb-6 flex-grow">
                             Минимальный образ. Загружает свежие пакеты из репозиториев во время установки. Идеально для тех, у кого быстрый интернет.
                         </p>
+                        <p class="text-sm text-alert-red mb-6 flex-grow">Внимание. В данный момент распространяется тестовая сборка без Security Manager. Только для целей тестирования.</p>
                         
-                        <div class="flex gap-2 mt-auto">
-                            <button class="flex-grow border border-term-green text-term-green py-3 hover:bg-term-green hover:text-black font-bold transition-colors">
-                                [ СКАЧАТЬ ISO ]
-                            </button>
-                            <button class="px-4 border border-term-dim text-gray-400 py-3 hover:text-white hover:border-white transition-colors text-xs" title="Скачать PGP подпись">
-                                [ .SIG ]
-                            </button>
+                            <div class="flex gap-2 mt-auto">
+                                <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-online-2025-12-26_21-59.iso?download=true"
+                                class="flex-grow bg-term-green text-black py-3 hover:bg-white font-bold transition-colors text-center"
+                                download>
+                                        [ СКАЧАТЬ ISO ]
+                                </a>
+                                <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-online-2025-12-26_21-59.iso.sig?download=true"
+                                class="px-4 flex items-center justify-center border border-term-dim text-gray-400 py-3 hover:text-white hover:border-white transition-colors text-xs text-center"
+                                title="Скачать PGP подпись"
+                                download>
+                                        [ .SIG ]
+                                </a>
                         </div>
                     </div>
 
@@ -344,14 +350,21 @@
                         <p class="text-sm text-gray-500 mb-6 flex-grow">
                             Полноценный образ. Содержит GNOME, KDE и все инструменты. Не требует интернета для установки.
                         </p>
+                        <p class="text-sm text-alert-red mb-6 flex-grow">Внимание. В данный момент распространяется тестовая сборка без Security Manager. Только для целей тестирования.</p>
                         
                         <div class="flex gap-2 mt-auto">
-                            <button class="flex-grow bg-term-green text-black py-3 hover:bg-white font-bold transition-colors">
-                                [ СКАЧАТЬ ISO ]
-                            </button>
-                            <button class="px-4 border border-term-dim text-gray-400 py-3 hover:text-white hover:border-white transition-colors text-xs" title="Скачать PGP подпись">
-                                [ .SIG ]
-                            </button>
+                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-offline-2025-12-26_22-13.iso?download=true"
+                            class="flex-grow flex items-center justify-center border border-term-green text-term-green py-3 hover:bg-term-green hover:text-black font-bold transition-colors text-center"
+                            download>
+                                    [ СКАЧАТЬ ISO ]
+                            </a>
+
+                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-offline-2025-12-26_22-13.iso.sig?download=true"
+                            class="px-4 flex items-center justify-center border border-term-dim text-gray-400 py-3 hover:text-white hover:border-white transition-colors text-xs text-center"
+                            title="Скачать PGP подпись"
+                            download>
+                                    [ .SIG ]
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -363,7 +376,7 @@
                         <p class="mb-4 text-white">gpg --keyserver keys.openpgp.org --recv-keys CE48F2CC9BE03B4EFAB02343AA0A42D146D35FCE</p>
                         
                         <p class="mb-2 text-gray-500"># 2. Проверка подписи ISO</p>
-                        <p class="text-white">gpg --verify <span class="text-term-green">secux-online.iso.sig</span> secux-online.iso</p>
+                        <p class="text-white">gpg --verify <span class="text-term-green">SecuxLinux-online-2025-12-26_21-59.iso.sig</span> SecuxLinux-online-2025-12-26_21-59.iso</p>
                     </div>
                     <p class="mt-3 text-xs text-alert-red font-bold">
                         ! НИКОГДА НЕ УСТАНАВЛИВАЙТЕ СИСТЕМУ, ЕСЛИ ПОДПИСЬ НЕВЕРНА
