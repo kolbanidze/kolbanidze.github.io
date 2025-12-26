@@ -147,7 +147,7 @@
                         <div class="text-term-green mb-4 text-sm font-bold">[ TRUSTED_BOOT ]</div>
                         <h3 class="text-lg font-bold text-white mb-3">ДОВЕРЕННАЯ ЗАГРУЗКА</h3>
                         <p class="text-sm text-gray-500 leading-relaxed">
-                            Единая цепочка доверия от UEFI до экрана входа. Гарантирует, что вредоносный код не был внедрен из UEFI в систему.
+                            Полностью проверяемая цепочка доверия от UEFI до экрана входа. Гарантирует, что вредоносный код не был внедрен и ваши данные в безопасности.
                         </p>
                     </div>
 
@@ -230,6 +230,85 @@
                         <p>INFO: Настройка собственного репозитория ПО...</p>
                         <p class="text-term-green animate-pulse">INFO: Настройка доверенной загрузки...</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Requirements Section -->
+        <section class="border-t border-term-dim bg-black">
+            <div class="max-w-7xl mx-auto px-4 py-16">
+                <!-- Header -->
+                <div class="flex items-center gap-3 mb-10 justify-center md:justify-start">
+                    <span class="text-term-green font-bold text-xl">>></span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white uppercase tracking-tighter">Системные требования</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                    
+                    <!-- Minimum Specs -->
+                    <div class="term-border p-6 bg-[#050505] opacity-80 hover:opacity-100 transition-opacity">
+                        <div class="flex justify-between items-center border-b border-term-dim pb-3 mb-4">
+                            <h3 class="text-alert-red font-bold text-lg">[ МИНИМАЛЬНЫЕ ]</h3>
+                            <span class="text-xs text-term-gray">Чтобы кое-как запустилось</span>
+                        </div>
+                        <ul class="space-y-4 text-sm font-mono">
+                            <li class="flex justify-between items-center border-b border-[#111] pb-2">
+                                <span class="text-gray-500">ОЗУ</span>
+                                <span class="text-white font-bold">1 ГБ</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-[#111] pb-2">
+                                <span class="text-gray-500">Процессор</span>
+                                <span class="text-white font-bold">Да</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-[#111] pb-2">
+                                <span class="text-gray-500">Диск</span>
+                                <span class="text-white font-bold">15 ГБ</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="text-gray-500">Прошивка</span>
+                                <span class="text-white font-bold">UEFI</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Recommended Specs -->
+                    <div class="term-border p-6 bg-[#050505] relative shadow-[0_0_15px_rgba(51,255,0,0.05)]">
+                        <!-- Decorative corner -->
+                        <div class="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-r-[40px] border-t-term-green/20 border-r-transparent"></div>
+
+                        <div class="flex justify-between items-center border-b border-term-dim pb-3 mb-4">
+                            <h3 class="text-term-green font-bold text-lg">[ РЕКОМЕНДОВАННЫЕ ]</h3>
+                            <span class="text-xs text-term-green animate-pulse">Для комфортной работы</span>
+                        </div>
+                        <ul class="space-y-4 text-sm font-mono">
+                            <li class="flex justify-between items-center border-b border-[#111] pb-2">
+                                <span class="text-gray-500">ОЗУ</span>
+                                <span class="text-white font-bold">4 ГБ</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-[#111] pb-2">
+                                <span class="text-gray-500">Процессор</span>
+                                <span class="text-white font-bold">Многоядерный</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-[#111] pb-2">
+                                <span class="text-gray-500">Диск</span>
+                                <span class="text-white font-bold">30 ГБ SSD</span>
+                            </li>
+                             <li class="flex justify-between items-center border-b border-[#111] pb-2">
+                                <span class="text-gray-500">Безопасность</span>
+                                <span class="text-white font-bold">TPM 2.0</span>
+                            </li>
+                            <li class="flex flex-col gap-1 pt-1">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray-500">Прошивка</span>
+                                    <span class="text-white font-bold">UEFI + SB Keys</span>
+                                </div>
+                                <span class="text-[10px] text-gray-600 text-right uppercase tracking-wider">
+                                    ( Возможность замены ключей Secure Boot )
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </section>
