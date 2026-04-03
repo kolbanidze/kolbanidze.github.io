@@ -1,23 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="ru" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secux Linux</title>
-
-    <link rel="alternate" hreflang="en" href="https://kolbanidze.github.io/" />
-    <link rel="alternate" hreflang="ru" href="https://kolbanidze.github.io/ru/" />
-    <link rel="alternate" hreflang="x-default" href="https://kolbanidze.github.io/" />
-
-    <script>
-        var manualOverride = localStorage.getItem('lang-override');
-        if (!manualOverride) {
-            var userLang = navigator.language || navigator.userLanguage; 
-            if (userLang.toLowerCase().startsWith('ru')) {
-                window.location.replace('/ru');
-            }
-        }
-    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -31,17 +17,17 @@
             theme: {
                 extend: {
                     colors: {
-                        // Adwaita Dark Palette
-                        'adw-bg': '#1e1e1e',      
-                        'adw-fg': '#ffffff',      
-                        'adw-header': '#242424',  
-                        'adw-card': '#303030',    
+                        // Палитра Adwaita Dark
+                        'adw-bg': '#1e1e1e',      // Основной фон окна
+                        'adw-fg': '#ffffff',      // Основной текст
+                        'adw-header': '#242424',  // Заголовок
+                        'adw-card': '#303030',    // Карточки/Списки
                         'adw-card-hover': '#383838',
                         'adw-border': 'rgba(255, 255, 255, 0.07)',
-                        'adw-green': '#2ec27e',   
+                        'adw-green': '#2ec27e',   // GNOME Green
                         'adw-green-hover': '#33d17a',
-                        'adw-red': '#e01b24',     
-                        'adw-blue': '#3584e4',    
+                        'adw-red': '#e01b24',     // GNOME Red
+                        'adw-blue': '#3584e4',    // GNOME Blue (Accent)
                         'term-green': '#33ff00',
                     },
                     fontFamily: {
@@ -59,13 +45,13 @@
 
     <style>
         body {
-            background-color: #1e1e1e;
+            background-color: #1e1e1e; /* Adwaita Dark BG */
             color: #ffffff;
             font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* GNOME styled scrollbar */
+        /* Стилизация скроллбара под GNOME */
         ::-webkit-scrollbar { width: 12px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { 
@@ -75,14 +61,14 @@
         }
         ::-webkit-scrollbar-thumb:hover { background-color: rgba(255, 255, 255, 0.3); }
 
-        /* HeaderBar Emulation */
+        /* Эмуляция HeaderBar */
         .header-bar {
             background-color: #242424;
             border-bottom: 1px solid #000;
             box-shadow: inset 0 -1px 0 rgba(255,255,255,0.05);
         }
 
-        /* GNOME Button Styles (Pill shaped) */
+        /* Стиль кнопок GNOME (Pill shaped) */
         .btn-adwaita {
             border-radius: 9999px;
             font-weight: 600;
@@ -104,7 +90,7 @@
         }
         .btn-secondary:hover { background-color: rgba(255,255,255,0.15); }
 
-        /* Boxed Lists (GNOME Settings style) */
+        /* Boxed Lists (как в настройках GNOME) */
         .boxed-list {
             background-color: #303030;
             border-radius: 12px;
@@ -138,23 +124,20 @@
             <span class="font-bold text-base tracking-tight text-white">Secux Linux</span>
         </div>
 
-        <nav class="flex justify-end items-center gap-2 text-xs font-semibold w-2/3 md:w-2/3">
-            <a href="#features" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors hidden md:block">Features</a>
-            <a href="#customization" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors hidden md:block">Environment</a>
-            <a href="#requirements" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors hidden md:block">Requirements</a>
-            <a href="#download" class="px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors ml-2">Download</a>
-            
-            <!-- Language Switcher: Saves preference so script doesn't force English -->
-            <a href="/ru/" onclick="localStorage.setItem('lang-override', 'true');" class="px-3 py-1.5 ml-2 rounded-full text-gray-400 hover:text-white hover:bg-white/10 transition-colors">Русский</a>
+        <nav class="flex justify-end gap-2 text-xs font-semibold w-2/3 md:w-1/3">
+            <a href="#features" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors hidden md:block">Обзор</a>
+            <a href="#customization" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors hidden md:block">Окружение</a>
+            <a href="#requirements" class="px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors hidden md:block">Требования</a>
+            <a href="#download" class="px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors ml-2">Скачать</a>
         </nav>
     </header>
 
     <main class="flex-grow pt-[46px]">
 
-        <!-- Hero Section ("About Window" Style) -->
+        <!-- Hero Section (Стиль "About Window") -->
         <section class="max-w-4xl mx-auto px-4 py-16 md:py-24 text-center">
             <div class="mb-8 flex justify-center">
-                <!-- GNOME Lock Icon -->
+                <!-- Иконка замка в стиле GNOME -->
                 <div class="w-32 h-32 bg-gradient-to-br from-gray-700 to-gray-800 rounded-[2rem] shadow-2xl flex items-center justify-center border-t border-white/10">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-adw-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
@@ -167,23 +150,23 @@
                 Secux Linux
             </h1>
             <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-                A security-first distribution for those who don't even trust the hardware. Out-of-the-box encryption, trusted boot, protection against TPM attacks, and application isolation.
+                Security-first дистрибутив для тех, кто не доверяет даже железу. Шифрование из коробки, доверенная загрузка, защита от атак на TPM и изоляция приложений.
             </p>
             
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#download" class="btn-adwaita btn-suggested px-8 py-3 text-sm md:text-base shadow-lg shadow-blue-500/20">
-                    Download ISO
+                    Скачать образ
                 </a>
                 <a href="https://github.com/kolbanidze/secux-iso" class="btn-adwaita btn-secondary px-8 py-3 text-sm md:text-base">
-                    Source Code
+                    Исходный код
                 </a>
             </div>
         </section>
 
-        <!-- Features Grid (Adwaita Cards Style) -->
+        <!-- Features Grid (Стиль карточек Adwaita) -->
         <section id="features" class="max-w-6xl mx-auto px-4 py-12">
             <div class="flex items-baseline justify-between mb-6 px-2">
-                <h2 class="text-2xl font-bold">Security System</h2>
+                <h2 class="text-2xl font-bold">Система защиты</h2>
                 <span class="text-xs font-mono text-gray-500 bg-white/5 px-2 py-1 rounded">/etc/secux/security.conf</span>
             </div>
 
@@ -194,8 +177,8 @@
                     <div class="w-12 h-12 bg-[#3a3a3a] rounded-full flex items-center justify-center mb-4 text-adw-green">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">LUKS2 by Default</h3>
-                    <p class="text-sm text-gray-400 flex-grow">Full Disk Encryption (FDE). Argon2id protects against password brute-forcing better than classic methods.</p>
+                    <h3 class="font-bold text-lg mb-2">LUKS2 по умолчанию</h3>
+                    <p class="text-sm text-gray-400 flex-grow">Полное шифрование диска (FDE). Argon2id защищает от перебора паролей лучше классических методов.</p>
                 </div>
 
                 <!-- 2. Trusted Boot -->
@@ -203,8 +186,8 @@
                     <div class="w-12 h-12 bg-[#3a3a3a] rounded-full flex items-center justify-center mb-4 text-adw-blue">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Trusted Boot</h3>
-                    <p class="text-sm text-gray-400 flex-grow">A continuous chain of trust from UEFI to system login. Guaranteed bootloader integrity.</p>
+                    <h3 class="font-bold text-lg mb-2">Доверенная загрузка</h3>
+                    <p class="text-sm text-gray-400 flex-grow">Непрерывная цепочка доверия от UEFI до входа в систему. Гарантия целостности загрузчика.</p>
                 </div>
 
                 <!-- 3. IDP (New Feature) -->
@@ -213,7 +196,7 @@
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
                     </div>
                     <h3 class="font-bold text-lg mb-2">IDP Protection</h3>
-                    <p class="text-sm text-gray-400 flex-grow">An additional layer of cryptographic protection on top of TPM. Protects keys from physical attacks and voltage manipulation.</p>
+                    <p class="text-sm text-gray-400 flex-grow">Дополнительный слой криптографической защиты поверх TPM. Защита ключей от физических атак и манипуляций напряжением.</p>
                 </div>
 
                 <!-- 4. Kernel -->
@@ -222,7 +205,7 @@
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
                     </div>
                     <h3 class="font-bold text-lg mb-2">Hardened Kernel</h3>
-                    <p class="text-sm text-gray-400 flex-grow">Kernel choice during installation: Hardened for the paranoid, LTS for stability, or Zen for performance.</p>
+                    <p class="text-sm text-gray-400 flex-grow">Выбор ядра при установке: Hardened для параноиков, LTS для стабильности или Zen для скорости.</p>
                 </div>
 
                 <!-- 5. Sandbox -->
@@ -230,8 +213,8 @@
                     <div class="w-12 h-12 bg-[#3a3a3a] rounded-full flex items-center justify-center mb-4 text-purple-400">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Sandboxing</h3>
-                    <p class="text-sm text-gray-400 flex-grow">Applications from the Security Manager are distributed as Flatpaks with reinforced system isolation.</p>
+                    <h3 class="font-bold text-lg mb-2">Песочница</h3>
+                    <p class="text-sm text-gray-400 flex-grow">Приложения из Security Manager поставляются в Flatpak с усиленной изоляцией от системы.</p>
                 </div>
                 
                 <!-- 6. Rolling Release -->
@@ -239,8 +222,8 @@
                     <div class="w-12 h-12 bg-[#3a3a3a] rounded-full flex items-center justify-center mb-4 text-red-400">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Stability</h3>
-                    <p class="text-sm text-gray-400 flex-grow">Exclusive in-house software repositories, completely independent of Arch Linux.</p>
+                    <h3 class="font-bold text-lg mb-2">Стабильность</h3>
+                    <p class="text-sm text-gray-400 flex-grow">Только собственные репозитории ПО, независимые от Arch Linux.</p>
                 </div>
 
             </div>
@@ -252,24 +235,24 @@
                 
                 <!-- Left: Text content -->
                 <div>
-                    <h2 class="text-3xl font-bold mb-4">Installation Options</h2>
+                    <h2 class="text-3xl font-bold mb-4">Варианты установки</h2>
                     <p class="text-gray-400 mb-6">
-                        The Secux Linux graphical installer allows you to choose your environment. Security shouldn't mean suffering in the console (unless you want to).
+                        Графический установщик Secux Linux позволяет выбрать окружение. Безопасность не должна означать страдание в консоли (если вы сами этого не хотите).
                     </p>
                     
                     <!-- Adwaita Boxed List Style for Options -->
                     <div class="boxed-list">
                         <div class="boxed-row">
                             <div>
-                                <div class="font-bold">Server Installation</div>
-                                <div class="text-xs text-gray-400">Pure TTY, kernel, and utilities</div>
+                                <div class="font-bold">Серверная установка</div>
+                                <div class="text-xs text-gray-400">Чистый TTY, ядро, утилиты</div>
                             </div>
                             <div class="bg-gray-700 text-xs px-2 py-1 rounded">CLI</div>
                         </div>
                         <div class="boxed-row">
                             <div>
-                                <div class="font-bold">Workstation</div>
-                                <div class="text-xs text-gray-400">The latest versions of GNOME or KDE Plasma</div>
+                                <div class="font-bold">Рабочая станция</div>
+                                <div class="text-xs text-gray-400">Последние версии GNOME или KDE Plasma</div>
                             </div>
                             <div class="bg-adw-blue text-white text-xs px-2 py-1 rounded">GUI</div>
                         </div>
@@ -283,15 +266,15 @@
                         <div class="w-2 h-2 rounded-full bg-term-green animate-pulse"></div>
                     </div>
                     <div class="p-4 text-gray-300 space-y-1 h-64 overflow-y-auto">
-                        <p>INFO: Data collection complete. Starting installation...</p>
-                        <p>INFO: Automatic disk partitioning /dev/nvme0n1</p>
-                        <p>INFO: Configuring LUKS2 encryption</p>
-                        <p>INFO: Mounting file systems</p>
-                        <p>INFO: Installing operating system packages</p>
-                        <p class="pl-4 text-adw-blue">> Environment selection: GNOME</p>
-                        <p>INFO: Configuring the operating system</p>
-                        <p>INFO: Configuring custom software repository</p>
-                        <p class="text-term-green animate-pulse">INFO: Configuring trusted boot...</p>
+                        <p>INFO: Сбор данных завершен. Начало установки...</p>
+                        <p>INFO: Автоматическая разметка диска /dev/nvme0n1</p>
+                        <p>INFO: Настройка шифрования LUKS2</p>
+                        <p>INFO: Монтирование файловых систем</p>
+                        <p>INFO: Установка пакетов операционной системы</p>
+                        <p class="pl-4 text-adw-blue">> Выбор окружения: GNOME</p>
+                        <p>INFO: Настройка операционной системы</p>
+                        <p>INFO: Настройка собственного репозитория ПО</p>
+                        <p class="text-term-green animate-pulse">INFO: Настройка доверенной загрузки...</p>
                     </div>
                 </div>
             </div>
@@ -299,28 +282,28 @@
 
         <!-- Requirements (Boxed Lists Style) -->
         <section id="requirements" class="max-w-3xl mx-auto px-4 py-12">
-            <h2 class="text-2xl font-bold mb-6 text-center">System Requirements</h2>
+            <h2 class="text-2xl font-bold mb-6 text-center">Системные требования</h2>
 
             <div class="grid md:grid-cols-2 gap-6">
                 
                 <!-- Minimum -->
                 <div>
-                    <h3 class="text-sm font-bold text-gray-500 uppercase mb-3 ml-2">Minimum</h3>
+                    <h3 class="text-sm font-bold text-gray-500 uppercase mb-3 ml-2">Минимальные</h3>
                     <div class="boxed-list text-sm">
                         <div class="boxed-row">
-                            <span>RAM</span>
-                            <span class="font-mono font-bold">1 GB</span>
+                            <span>ОЗУ</span>
+                            <span class="font-mono font-bold">1 ГБ</span>
                         </div>
                         <div class="boxed-row">
                             <span>CPU</span>
                             <span class="font-mono font-bold">x86_64</span>
                         </div>
                         <div class="boxed-row">
-                            <span>Disk</span>
-                            <span class="font-mono font-bold">15 GB</span>
+                            <span>Диск</span>
+                            <span class="font-mono font-bold">15 ГБ</span>
                         </div>
                         <div class="boxed-row">
-                            <span>Firmware</span>
+                            <span>Устройство</span>
                             <span class="font-mono font-bold text-yellow-500">UEFI</span>
                         </div>
                     </div>
@@ -328,22 +311,22 @@
 
                 <!-- Recommended -->
                 <div>
-                    <h3 class="text-sm font-bold text-gray-500 uppercase mb-3 ml-2">Recommended</h3>
+                    <h3 class="text-sm font-bold text-gray-500 uppercase mb-3 ml-2">Рекомендуемые</h3>
                     <div class="boxed-list text-sm">
                         <div class="boxed-row">
-                            <span>RAM</span>
-                            <span class="font-mono font-bold text-adw-green">4 GB+</span>
+                            <span>ОЗУ</span>
+                            <span class="font-mono font-bold text-adw-green">4 ГБ+</span>
                         </div>
                         <div class="boxed-row">
                             <span>CPU</span>
                             <span class="font-mono font-bold">Multi-core</span>
                         </div>
                         <div class="boxed-row">
-                            <span>Disk</span>
-                            <span class="font-mono font-bold">30 GB SSD</span>
+                            <span>Диск</span>
+                            <span class="font-mono font-bold">30 ГБ SSD</span>
                         </div>
                         <div class="boxed-row">
-                            <span>Hardware</span>
+                            <span>Устройство</span>
                             <span class="font-mono font-bold text-yellow-500">UEFI, TPM 2.0</span>
                         </div>
                     </div>
@@ -355,7 +338,7 @@
         <!-- Download Section -->
         <section id="download" class="bg-[#181818] border-t border-white/5 py-16">
             <div class="max-w-5xl mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-10">Downloads</h2>
+                <h2 class="text-3xl font-bold text-center mb-10">Загрузки</h2>
                 <div class="grid md:grid-cols-2 gap-6 mb-12">
                     
                     <!-- Online ISO -->
@@ -365,13 +348,13 @@
                         </div>
                         <div class="mb-4">
                             <div class="flex justify-between items-center mb-1">
-                                <h3 class="text-xl font-bold">Online Build</h3>
+                                <h3 class="text-xl font-bold">Онлайн сборка</h3>
                                 <span class="bg-blue-900/30 text-blue-400 text-xs font-bold px-2 py-1 rounded-full">2.3 GB</span>
                             </div>
-                            <p class="text-sm text-gray-400">Minimal image. Downloads the latest packages during installation.</p>
+                            <p class="text-sm text-gray-400">Минимальный образ. Загружает свежие пакеты при установке.</p>
                         </div>
                         <div class="mt-auto flex gap-3 z-10">
-                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-online-2026-04-03_17-13.iso?download=true" class="btn-adwaita btn-suggested py-2 px-4 flex-grow text-sm">Download ISO</a>
+                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-online-2026-04-03_17-13.iso?download=true" class="btn-adwaita btn-suggested py-2 px-4 flex-grow text-sm">Скачать ISO</a>
                             <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-online-2026-04-03_17-13.iso.sig?download=true" class="btn-adwaita btn-secondary py-2 px-4 text-sm" title="PGP Signature">.SIG</a>
                         </div>
                     </div>
@@ -386,13 +369,13 @@
                         </div>
                         <div class="mb-4">
                             <div class="flex justify-between items-center mb-1">
-                                <h3 class="text-xl font-bold">Offline Build</h3>
+                                <h3 class="text-xl font-bold">Офлайн сборка</h3>
                                 <span class="bg-gray-700 text-gray-300 text-xs font-bold px-2 py-1 rounded-full">6.4 GB</span>
                             </div>
-                            <p class="text-sm text-gray-400">Full image featuring GNOME and KDE. No internet connection required.</p>
+                            <p class="text-sm text-gray-400">Полный образ с GNOME и KDE. Интернет не требуется.</p>
                         </div>
                         <div class="mt-auto flex gap-3 z-10">
-                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-offline-2026-04-03_17-13.iso?download=true" class="btn-adwaita bg-white text-black hover:bg-gray-200 py-2 px-4 flex-grow text-sm">Download ISO</a>
+                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-offline-2026-04-03_17-13.iso?download=true" class="btn-adwaita bg-white text-black hover:bg-gray-200 py-2 px-4 flex-grow text-sm">Скачать ISO</a>
                             <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-offline-2026-04-03_17-13.iso.sig?download=true" class="btn-adwaita btn-secondary py-2 px-4 text-sm" title="PGP Signature">.SIG</a>
                         </div>
                     </div>
@@ -401,12 +384,12 @@
 
                 <!-- PGP Verify -->
                 <div class="max-w-3xl mx-auto">
-                    <h4 class="text-xs font-bold text-gray-500 uppercase mb-2 ml-1">Integrity Check</h4>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase mb-2 ml-1">Проверка целостности</h4>
                     <div class="code-block text-xs md:text-sm overflow-x-auto">
-                        <div class="text-gray-500 mb-2"># 1. Import developer key</div>
+                        <div class="text-gray-500 mb-2"># 1. Импорт ключа разработчика</div>
                         <div class="select-all mb-4 text-blue-300">gpg --keyserver keys.openpgp.org --recv-keys CE48F2CC9BE03B4EFAB02343AA0A42D146D35FCE</div>
                         
-                        <div class="text-gray-500 mb-2"># 2. Verify signature</div>
+                        <div class="text-gray-500 mb-2"># 2. Проверка подписи</div>
                         <div class="select-all">gpg --verify <span class="text-adw-green">SecuxLinux-*.iso.sig</span> SecuxLinux-*.iso</div>
                     </div>
                 </div>
@@ -419,7 +402,7 @@
         <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-gray-500">
             <div class="mb-4 md:mb-0 text-center md:text-left">
                 <p class="text-gray-300 font-bold">Secux Linux Project</p>
-                <p>&copy; 2026. MIT License.</p>
+                <p>&copy; 2026. Лицензия MIT.</p>
             </div>
             <div class="flex gap-6">
                 <a href="https://github.com/kolbanidze" class="hover:text-white transition-colors">GitHub</a>
@@ -430,7 +413,7 @@
     </footer>
 
     <script>
-        // Smooth scrolling
+        // Плавная прокрутка
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
