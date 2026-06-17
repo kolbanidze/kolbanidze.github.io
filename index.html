@@ -355,13 +355,13 @@
                             <p class="text-sm text-gray-400">Minimal image. Downloads the latest packages during installation.</p>
                         </div>
                         <div class="mt-auto flex gap-3 z-10">
-                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-online-2026-05-09_15-35.iso?download=true" class="btn-adwaita btn-suggested py-2 px-4 flex-grow text-sm">Download ISO</a>
-                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-online-2026-05-09_15-35.iso.sig?download=true" class="btn-adwaita btn-secondary py-2 px-4 text-sm" title="PGP Signature">.SIG</a>
+                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-online-2026-06-17_00-07.iso?download=true" class="btn-adwaita btn-suggested py-2 px-4 flex-grow text-sm">Download ISO</a>
+                            <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-online-2026-06-17_00-07.iso.sig?download=true" class="btn-adwaita btn-secondary py-2 px-4 text-sm" title="PGP Signature">.SIG</a>
                         </div>
                     </div>
 
                     <!-- Offline ISO -->
-                    <div class="bg-adw-card rounded-xl p-6 border border-adw-border flex flex-col relative overflow-hidden group">
+                    <!-- <div class="bg-adw-card rounded-xl p-6 border border-adw-border flex flex-col relative overflow-hidden group">
                         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                             <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
@@ -378,6 +378,38 @@
                         <div class="mt-auto flex gap-3 z-10">
                             <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-offline-2026-05-09_15-35.iso?download=true" class="btn-adwaita bg-white text-black hover:bg-gray-200 py-2 px-4 flex-grow text-sm">Download ISO</a>
                             <a href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-offline-2026-05-09_15-35.iso.sig?download=true" class="btn-adwaita btn-secondary py-2 px-4 text-sm" title="PGP Signature">.SIG</a>
+                        </div>
+                    </div> -->
+
+                    <!-- Offline ISO unavailable-->
+                    <div class="bg-adw-card/50 rounded-xl p-6 border border-adw-border/50 flex flex-col relative overflow-hidden group select-none">
+                        <div class="absolute top-0 right-0 p-4 opacity-5 transition-opacity">
+                            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                                <path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                            </svg>
+                        </div>
+                        
+                        <div class="mb-4 opacity-60">
+                            <div class="flex justify-between items-center mb-1">
+                                <div class="flex items-center gap-3">
+                                    <h3 class="text-xl font-bold text-gray-400">Offline Build</h3>
+                                    <span class="bg-amber-500/10 text-amber-500 border border-amber-500/20 text-[10px] font-medium px-2 py-0.5 rounded-full whitespace-nowrap">
+                                        Temporarily unavailable
+                                    </span>
+                                </div>
+                                <span class="bg-gray-800 text-gray-500 text-xs font-bold px-2 py-1 rounded-full">6.4 GB</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2">Full image featuring GNOME and KDE. No internet connection required.</p>
+                        </div>
+
+                        <div class="mt-auto flex gap-3 z-10">
+                            <button disabled class="btn-adwaita bg-zinc-800 text-zinc-500 cursor-not-allowed py-2 px-4 flex-grow text-sm font-medium">
+                                Download ISO
+                            </button>
+                            <button disabled class="btn-adwaita bg-zinc-800/50 text-zinc-600 cursor-not-allowed py-2 px-4 text-sm" title="PGP Signature">
+                                .SIG
+                            </button>
                         </div>
                     </div>
 
