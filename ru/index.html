@@ -26,7 +26,7 @@
     <div class="hero">
       <div>
         <h1>Secux Linux</h1>
-        <p class="intro">Secux защищает ключ диска с помощью TPM 2.0 и PIN-кода по собственной схеме IDP. В установщике можно выбрать ядро с усиленной защитой.</p>
+        <p class="intro">Защищенный дистрибутив Linux, который интегрирует TPM 2.0, принципы Defense-in-Depth и собственные механизмы шифрования для защиты от изощренных атак.</p>
         <section id="download" aria-labelledby="choose">
           <h2 id="choose">Выберите ISO-образ</h2>
           <div class="box">
@@ -45,7 +45,7 @@
               <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#disc"></use></svg></span>
               <div>
                 <h3>Установка без интернета</h3>
-                <p><span class="size">7,15 ГБ</span> · Все пакеты уже включены в образ.</p>
+                <p><span class="size">7,00 ГБ</span> · Все пакеты уже включены в образ.</p>
               </div>
               <div class="actions">
                 <a class="iso" href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-offline-2026-11-23_17-00.iso?download=true" aria-label="Скачать ISO — Установка без интернета"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#download"></use></svg>Скачать ISO</a>
@@ -77,15 +77,15 @@
         <h2 id="security">Защита системы</h2>
           <div class="feature">
             <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#lock"></use></svg>
-            <div><h3>Secux IDP</h3><p>In-Depth Protection дополняет шифрование LUKS2. Из вашего PIN-кода выводится ключ, который защищает хранимый в TPM секрет разблокировки диска.</p></div>
+            <div><h3>Secux IDP</h3><p>In-Depth Protection дополняет шифрование LUKS2, создавая дополнительный слой криптографической защиты поверх TPM, защищая от аппаратных атак.</p></div>
           </div>
           <div class="feature">
             <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#shield"></use></svg>
-            <div><h3>TPM 2.0 и Secure Boot</h3><p>Secure Boot проверяет подпись загрузочного образа. Если разблокировка привязана к TPM, изменение параметров загрузки может потребовать ключ восстановления.</p></div>
+            <div><h3>TPM 2.0 и Secure Boot</h3><p>Проверка каждого этапа загрузки по умолчанию, защищая от Evil Maid атак. Если разблокировка привязана к TPM, нештатное изменение параметров загрузки потребует ключ восстановления.</p></div>
           </div>
           <div class="feature">
             <svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#settings"></use></svg>
-            <div><h3>Усиленная защита ядра</h3><p>Ядро linux-secux использует контроль целостности потока управления (CFI) для проверки косвенных вызовов функций. Его можно выбрать при установке.</p></div>
+            <div><h3>Усиленная защита ядра</h3><p>Ядро linux-secux использует различные технологии защиты ядра для уменьшения поверхности атаки и устранения классов уязвимостей (CFI, memory hardening и т.д.). Его можно выбрать при установке.</p></div>
           </div>
       </section>
       <section id="requirements" aria-labelledby="hardware">

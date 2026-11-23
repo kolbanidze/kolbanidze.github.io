@@ -26,7 +26,7 @@
     <div class="hero">
       <div>
         <h1>Secux Linux</h1>
-        <p class="intro">Secux pairs TPM 2.0 with a PIN to protect your disk through its own encryption scheme, IDP. A hardened kernel is available in the installer.</p>
+        <p class="intro">A hardened Linux distribution that integrates TPM 2.0, defense-in-depth practices, and novel encryption mechanisms to protect against sophisticated attacks.</p>
         <section id="download" aria-labelledby="choose">
           <h2 id="choose">Choose an ISO image</h2>
           <div class="box">
@@ -45,7 +45,7 @@
               <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#disc"></use></svg></span>
               <div>
                 <h3>Offline installation</h3>
-                <p><span class="size">7.15 GB</span> · All packages are included in the image.</p>
+                <p><span class="size">7.00 GB</span> · All packages are included in the image.</p>
               </div>
               <div class="actions">
                 <a class="iso" href="https://huggingface.co/datasets/Kolbanidze/Secux_Linux/resolve/main/SecuxLinux-offline-2026-11-23_17-00.iso?download=true" aria-label="Download ISO — Offline installation"><svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#download"></use></svg>Download ISO</a>
@@ -77,15 +77,15 @@
         <h2 id="security">System security</h2>
           <div class="feature">
             <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#lock"></use></svg>
-            <div><h3>Secux IDP</h3><p>In-Depth Protection adds a layer of encryption to LUKS2. Your PIN helps derive the key that protects the disk unlock secret held by the TPM.</p></div>
+            <div><h3>Secux IDP</h3><p>In-Depth Protection complements LUKS2 encryption by adding an extra layer of cryptographic protection on top of the TPM, providing defense against hardware-based attacks.</p></div>
           </div>
           <div class="feature">
             <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#shield"></use></svg>
-            <div><h3>TPM 2.0 and Secure Boot</h3><p>Secure Boot checks the boot image signature. With TPM-bound unlocking, changes to the measured boot state can require a recovery key.</p></div>
+            <div><h3>TPM 2.0 and Secure Boot</h3><p>Every stage of the boot process is verified by default,providing protection against Evil Maid attacks. If TPM-based protection is enabled, any unauthorized modification to boot settings will require a recovery key.</p></div>
           </div>
           <div class="feature">
             <svg class="icon" aria-hidden="true"><use href="./assets/icons.svg#settings"></use></svg>
-            <div><h3>Kernel hardening</h3><p>The optional linux-secux kernel uses control-flow integrity (CFI) to check indirect function calls. You can select it in the graphical installer.</p></div>
+            <div><h3>Kernel hardening</h3><p>The linux-secux kernel employs various kernel protection technologies to reduce the attack surface and eliminate classes of vulnerabilities (CFI, memory hardening, etc). It can be selected during installation.</p></div>
           </div>
       </section>
       <section id="requirements" aria-labelledby="hardware">
